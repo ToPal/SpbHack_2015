@@ -19,11 +19,9 @@ module.exports = function (req, res, next) {
                 }, cb);
             }
 
-            return cb(null, User);
+            return cb(null, User[0]);
         },
-        function (Users, cb) {
-            var User = Users[0];
-
+        function (User, cb) {
             async.waterfall([
                 function (cb2) {
                     controller.findDelivering({
@@ -37,13 +35,13 @@ module.exports = function (req, res, next) {
                             executor_id: User.id
                         }, cb);
                     }
-                    cb2(null, Deliverings);
+                    cb2(null, Deliverings[0]);
                 }
             ], function (err) {
                 return cb(err);
             });
         },
-        function (Deliverings, cb) {
+        function (Delivering, cb) {
             var text = "Откуда вы поедете? Напишите адрес или укажите точку на карте.";
             common.sendTelegramMessage('sendMessage', {
                 chat_id: chat_id,
