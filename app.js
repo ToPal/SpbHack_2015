@@ -5,8 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var auth = require('./auth.json');
+var common = require('./funcs/common');
+var setWebHook = require('./funcs/bot_api/setWebhook');
+var messageHandler = require('./funcs/messageHandler');
 
 var app = express();
 
@@ -22,8 +24,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+
+setWebHook(common.getCurrentUrl(), function (err) {
+  if (err) {
+    console.log('Не удалось установить webHook для бота');
+    process.exit(1);
+  }
+
+  console.log('webHook для бота установлен.');
+  app.post(auth.token, messageHandler);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
