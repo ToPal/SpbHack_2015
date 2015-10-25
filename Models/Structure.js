@@ -1,6 +1,6 @@
 module.exports = function (orm, db) {
 
-    var User = db.define("Executor", {
+    var User = db.define("User", {
         name: String,
         rating: Number,
 

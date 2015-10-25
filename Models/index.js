@@ -1,5 +1,6 @@
 var orm  = require('orm');
 var auth = require('../auth.json');
+var util = require('util');
 
 var connection = null;
 

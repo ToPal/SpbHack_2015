@@ -13,7 +13,10 @@ module.exports = function (req, res, next) {
         function (User, cb) {
             if (User.length == 0) {
                 var userName = req.body.message.from.first_name + req.body.message.from.last_name;
-                return controller.addUser(userName, userTelegramId, cb);
+                return controller.addUser({
+                    name: userName,
+                    telegram_id: userTelegramId
+                }, cb);
             }
 
             return cb(null, User);
@@ -30,7 +33,9 @@ module.exports = function (req, res, next) {
                 },
                 function (Deliverings, cb2) {
                     if (Deliverings.length == 0) {
-                        return controller.addDelivering(User.id, undefined, undefined, undefined, undefined, cb);
+                        return controller.addDelivering({
+                            executor_id: User.id
+                        }, cb);
                     }
                     cb2(null, Deliverings);
                 }

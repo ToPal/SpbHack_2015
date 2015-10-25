@@ -1,13 +1,11 @@
 var getDB = require('../Models');
 
 module.exports = {
-    addUser: function (name, cb) {
+    addUser: function (data, cb) {
         getDB(function(err, db) {
             if (err) return cb(err);
 
-            db.models.Users.create({
-                name: name
-            }, cb)
+            db.models.User.create(data, cb)
         });
     },
 
@@ -15,24 +13,19 @@ module.exports = {
         getDB(function (err, db) {
             if (err) return cb(err);
 
-            db.models.Users.find({
+            db.models.User.find({
                 telegram_id: telegramId
             }, cb)
         });
     },
 
-    addDelivering: function (executorId, clientId, from, to, time, cb) {
+    addDelivering: function (data, cb) {
         getDB(function (err, db) {
             if (err) return cb(err);
 
-            db.models.Delivering({
-                executor: executorId,
-                client: clientId,
-                from: from,
-                to: to,
-                time: time,
-                status: 0
-            }, cb);
+            data.status = data.status || 0;
+
+            db.models.Delivering(data, cb);
         });
     },
 
