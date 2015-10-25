@@ -17,7 +17,7 @@ function setup(db, cb) {
 module.exports = function (cb) {
     if (connection) return cb(null, connection);
 
-    var mysql_str = util.format("mysql://%s:%s@%s/%s", auth.dbName, auth.dbPass, auth.dbAddr);
+    var mysql_str = util.format("mysql://%s:%s@%s/%s", auth.dbName, auth.dbPass, auth.dbAddr, auth.dbName);
 
     orm.connect(mysql_str, function (err, db) {
         if (err) return cb(err);
