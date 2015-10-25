@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d9175dc-44ee-43eb-8c9a-cb66a45fc8d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/Structure.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/funcs/bot_funcs/go.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funcs/messageHandler.js" afterPath="$PROJECT_DIR$/funcs/messageHandler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funcs/bot_funcs/start.js" afterPath="$PROJECT_DIR$/funcs/bot_funcs/start.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2d9175dc-44ee-43eb-8c9a-cb66a45fc8d2" name="Default" comment="" />
     <ignored path="SpbHack2015.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,11 +67,11 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375" vertical-offset="45" max-vertical-offset="390">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="405">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
-                <marker date="1445770641340" expanded="true" signature="27:401" placeholder="{&quot;name&quot;: &quot;SpbHack2015&quot;...}" />
-                <marker date="1445770641340" expanded="true" signature="202:399" placeholder="{&quot;body-parser&quot;: &quot;~1.13.2&quot;...}" />
+                <marker date="1445772404862" expanded="true" signature="68:424" placeholder="{&quot;name&quot;: &quot;SpbHack2015&quot;...}" />
+                <marker date="1445772404862" expanded="true" signature="256:422" placeholder="{&quot;body-parser&quot;: &quot;~1.13.2&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -371,10 +362,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -456,11 +447,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375" vertical-offset="45" max-vertical-offset="390">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="405">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
-            <marker date="1445770641340" expanded="true" signature="27:401" placeholder="{&quot;name&quot;: &quot;SpbHack2015&quot;...}" />
-            <marker date="1445770641340" expanded="true" signature="202:399" placeholder="{&quot;body-parser&quot;: &quot;~1.13.2&quot;...}" />
+            <marker date="1445772404862" expanded="true" signature="68:424" placeholder="{&quot;name&quot;: &quot;SpbHack2015&quot;...}" />
+            <marker date="1445772404862" expanded="true" signature="256:422" placeholder="{&quot;body-parser&quot;: &quot;~1.13.2&quot;...}" />
           </folding>
         </state>
       </provider>
