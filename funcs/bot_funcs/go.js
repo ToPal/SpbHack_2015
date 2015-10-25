@@ -25,14 +25,14 @@ module.exports = function (req, res, next) {
             async.waterfall([
                 function (cb2) {
                     controller.findDelivering({
-                        executor_id: User.id,
+                        executor: User.id,
                         status: 0
                     }, cb2);
                 },
                 function (Deliverings, cb2) {
                     if (Deliverings.length == 0) {
                         return controller.addDelivering({
-                            executor_id: User.id
+                            executor: User.id
                         }, cb);
                     }
                     cb2(null, Deliverings[0]);
