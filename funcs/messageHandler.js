@@ -28,5 +28,6 @@ function messageHandler (req, res, next) {
 }
 
 addHandler('start', require('./bot_funcs/start'));
+addHandler('еду', require('./bot_funcs/go'));
 
 module.exports = messageHandler;
