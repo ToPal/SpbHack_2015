@@ -24,15 +24,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var myUrl = common.getCurrentUrl();
+var router = express.Router();
+router.post('/' + auth.token_withoutDots, messageHandler);
+app.use(router);
 
-setWebHook(common.getCurrentUrl(), function (err) {
+setWebHook(myUrl, function (err, response, body) {
   if (err) {
     console.log('Не удалось установить webHook для бота');
     process.exit(1);
   }
+  
+  if (response.statusCode !== 200) {
+    console.log('Не удалось установить WebHook для бота, statusCode = %s, href: ', 
+      response.statusCode, response.request.href);
+    process.exit(2);
+  }
 
   console.log('webHook для бота установлен.');
-  app.post(auth.token, messageHandler);
 });
 
 // catch 404 and forward to error handler

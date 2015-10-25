@@ -2,11 +2,11 @@ var auth = require('../auth.json');
 var request = require('request');
 
 function getCurrentUrl() {
-    return 'https://sbphack-2015-topal.c9.io/' + auth.token;
+    return 'https://sbphack-2015-topal.c9.io/' + auth.token_withoutDots;
 }
 
 function getTelegramUrl() {
-    return 'https://api.telegram.org/' + auth.token;
+    return 'https://api.telegram.org/bot' + auth.token;
 }
 
 function sendTelegramMessage(functionName, data, cb) {
