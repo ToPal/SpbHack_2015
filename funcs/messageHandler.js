@@ -13,17 +13,16 @@ function messageHandler (req, res, next) {
 
     if (message.length && message[0] == '/') {
         var functionName = message.split(' ')[0];
+        console.log('function: %s, update_id: %s, message: %s', functionName, update_id, JSON.stringify(message));
+
         for (var i = 0; i < handlers.length; i++) {
             if (functionName == handlers[i].name) {
                 return handlers[i].handler(req, res, next);
             }
         }
-
-        console.log('function: %s, update_id: %s, message: %s', functionName, update_id, JSON.stringify(message));
     }
 
     console.log('update_id: %s, message: %s', update_id, JSON.stringify(message));
-
     return res.json({});
 }
 
